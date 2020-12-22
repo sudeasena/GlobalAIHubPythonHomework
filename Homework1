@@ -1,0 +1,35 @@
+myarray=[]
+
+first = input("first:")
+myarray.append(first)
+second = input("second:")
+myarray.append(second)
+third = input("third:")
+myarray.append(third)
+fourth = input("fourth:")
+myarray.append(fourth)
+fifth = input("fifth:")
+myarray.append(fifth)
+
+print(myarray)
+
+print(type(myarray))
+
+print(type(myarray[0]),type(myarray[1]),type(myarray[2]),type(myarray[3]),type(myarray[4]))
+#burada input ile alınan değerler string olacağı için tüm değerler str tipi olacaktır.
+
+print(f'0. index is {myarray[0]}')
+print("0. index is {} ".format(myarray[0]))
+
+print(f'1. index is {myarray[1]}')
+print("1. index is {} ".format(myarray[1]))
+
+print(f'2. index is {myarray[2]}')
+print("2. index is {} ".format(myarray[2]))
+
+print(f'3. index is {myarray[3]}')
+print("3. index is {} ".format(myarray[3]))
+
+print(f'4. index is {myarray[4]}')
+print("4. index is {} ".format(myarray[4]))
+
