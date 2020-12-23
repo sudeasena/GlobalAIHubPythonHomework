@@ -1,0 +1,19 @@
+mylist=[]
+
+fname = input("First name:")
+mylist.append(fname)
+lname = input("Last name:")
+mylist.append(lname)
+age = int(input("Age:"))
+mylist.append(age)
+birth = int(input("Birth:"))
+mylist.append(birth)
+
+
+for i in mylist:
+  print(i)
+
+if age<18:
+      print("You can go out because it's too dangerous")
+else:
+      print("you can go out to the street")
