@@ -1,0 +1,40 @@
+import random
+
+username=str(input("Username:"))
+print("Welcome to hangman game",username)
+
+wordbox = ["cat","tree","dog","flower","red","student","python"]
+word = random.choice(wordbox)
+characters = [] 
+heart=5
+wordLen= len(word)
+underspace = list('_'*wordLen)
+print(' '.join(underspace), end='\n')
+
+while heart > 0:
+      
+    char = input("Enter a character:")
+          
+    if char in characters:
+        print("please do not guess the predicted character again")
+        continue
+
+    elif char not in word:  
+        heart -= 1
+        print("False!. heart = {} ".format(heart))
+    
+    else:
+        for i in range(len(word)):
+            if char == word[i]:
+               print("Congrats!")
+               underspace[i] = char
+               characters.append(char)
+               print(' '.join(underspace), end='\n')
+    
+    if heart == 0:
+        print("Loser..Try Again :(")
+        break
+    
+    if (''.join(underspace)) == (''.join(word)):
+        print("You are winner!!")
+        break
