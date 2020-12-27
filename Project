@@ -1,0 +1,97 @@
+username="sude"
+lessonList=[]
+guess=0
+sudeLessons=[]
+chosenLessons={}
+b=0
+x=0
+y=0
+z=0
+
+
+for i in range(3):
+  user=input("Please enter your username: ")
+  guess+=1
+  if username==user:
+    print("Welcome",username)
+    break
+
+  elif guess==3:
+    print("Please try again later!!")
+    break
+  else:
+    print("Invalid username!")
+
+for j in range(5):
+  lesson=input("Enter a lesson:")
+  lessonList.append(lesson)
+
+print(lessonList)
+
+count=int(input("How many lesson do you want to choose?:"))
+
+
+while x!=1:
+  if count>5:
+     count=int(input("You can choose up to 5 lessons:"))
+     x=0
+
+  elif 3<=count<=5:
+    y=0
+    break
+  
+          
+  else:
+    y=1
+    break
+      
+if y==1:
+  print("You failed in class!!")
+
+else:
+  for i in lessonList:
+    while b!=count:
+      lessons=input("Please enter a lesson: ")
+    
+      if lessons in lessonList:
+        sudeLessons.append(lessons)
+        lessonList.remove(lessons)
+        b+=1
+      
+      else:
+        print("Invalid lesson!")
+
+print("Your lessons:",sudeLessons)
+
+while z==0:
+  l=input("Choose the lesson to take the exam:")
+  if l in sudeLessons:
+    z=1
+ 
+
+  else:
+    print("Sorry..You didn't take this lesson")
+    z=0
+
+midterm=float(input("Midterm:"))
+final=float(input("Final:"))
+project=float(input("Project:"))
+
+grade=(midterm*30)/100+(final*50)/100+(project*20)/100
+print("Grade:",grade)
+
+if grade>90:
+  print("AA")
+
+elif 70<grade<90:
+  print("BB")
+
+elif 50<grade<70:
+  print("CC")
+
+elif 30<grade<50:
+  print("DD")
+
+else:
+  print("FF")
+  print("You failed this lesson!!")
